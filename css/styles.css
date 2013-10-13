@@ -5,6 +5,18 @@
 @import url(https://fonts.googleapis.com/css?family=Cantora+One);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
+@-webkit-keyframes pulse {
+    0%      {opacity: 0.3;}
+    50%     {opacity: 1;}
+    100%    {opacity: 0.3;}
+}
+
+@keyframes pulse {
+    0%      {opacity: 0.3;}
+    50%     {opacity: 1;}
+    100%    {opacity: 0.3;}
+}
+                    
 body {
 	background-image: url('../img/sandpaper.png');
 	font-family: 'Open Sans', sans-serif;
@@ -13,7 +25,7 @@ body {
 
 article {
 	width: 90%;
-	background-color: white;
+	background-color: #FFF;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	margin-right: auto;
@@ -32,11 +44,9 @@ header {
 .logo {
 	height: 60px;
 	float: right;
-	opacity: 0.7;
-}
 
-.logo:hover {
-	opacity: 1;
+	-webkit-animation: pulse 5s infinite;
+	animation: pulse 5s infinite;
 }
 
 figure {
@@ -44,11 +54,11 @@ figure {
 	padding: 10px;
 	background-color: #FFF;
 
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	transition: all 0.2s ease;        
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;        
 }
 
 figcaption {
@@ -66,11 +76,11 @@ figure img {
 figure:hover {
 	box-shadow: 2px 2px 6px #555;
 
-	-webkit-transform: scale(1.5);
-	-moz-transform: scale(1.5);
-	-o-transform: scale(1.5);
-	-ms-transform: scale(1.5);
-	transform: scale(1.5);  
+	-webkit-transform: scale(1.5) rotate(360deg);
+	-moz-transform: scale(1.5) rotate(360deg);
+	-o-transform: scale(1.5) rotate(360deg);
+	-ms-transform: scale(1.5) rotate(360deg);
+	transform: scale(1.5) rotate(360deg); 
 }
 
 footer {
